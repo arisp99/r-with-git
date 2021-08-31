@@ -41,7 +41,7 @@ usethis::use_git_config(user.name = "first last",
                         user.email = "github email")
 ```
 
-- Ensure set-up was successful
+- Ensure setup was successful
 ```{bash}
 git config --global --list 
 ```
@@ -55,3 +55,47 @@ git config --global --list
 
 [^ref]: Following the [usethis guide](https://usethis.r-lib.org/articles/articles/git-credentials.html)
 
+# Git Basics
+
+## Stage & Commit
+
+```{r, echo = F, out.width='75%', fig.align='center', fig.cap='Git Workflow'}
+knitr::include_graphics('images/git-workflow.png')
+```
+
+- We can create and edit files within our project
+- We can then **stage** and **commit** these changes
+
+## Diff
+
+- We can look at the set of *differences* between files to see what has changed
+
+```{r, echo = F, out.width='60%', fig.align='center', fig.cap='Example Diff'}
+knitr::include_graphics('images/example-diff.png')
+```
+
+## Commit Best Practices
+
+Each commit should be:
+
+- *Minimal:* A commit should only contain changes related to a single problem 
+    or feature
+- *Complete:* A commit should add the functionality it claims to add
+- *Concise, yet evocative:* At a glance, you should be able to understand what 
+    a commit does, but you should include enough detail so you can remember 
+    what was done
+
+## Time Travel
+
+- Can look at old commits and access old code
+- Can use your git client or Github
+- Can revert back to a previous commit
+
+## Pull & Push Changes
+
+```{r, echo = F, out.width='60%', fig.align='center', fig.cap='Accessing the Cloud'}
+knitr::include_graphics('images/push-pull.png')
+```
+
+- **Pulling** changes from Github allows us to access stored changes
+- **Pushing** changes stores changes on Github
