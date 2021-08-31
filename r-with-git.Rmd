@@ -13,7 +13,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
   ollapse = TRUE,
-  comment = "#>")
+  comment = "#>",
+  eval = FALSE)
 ```
 
 # Setup
@@ -36,7 +37,7 @@ which git
 ## Configure Git
 
 - Introduce yourself to git
-```{r, eval = F}
+```{r}
 usethis::use_git_config(user.name = "first last",
                         user.email = "github email")
 ```
@@ -59,18 +60,18 @@ git config --global --list
 
 ## Stage & Commit
 
-```{r, echo = F, out.width='75%', fig.align='center', fig.cap='Git Workflow'}
-knitr::include_graphics('images/git-workflow.png')
-```
-
 - We can create and edit files within our project
 - We can then **stage** and **commit** these changes
+
+```{r, eval = T, echo = F, out.width='75%', fig.align='center', fig.cap='Git Workflow'}
+knitr::include_graphics('images/git-workflow.png')
+```
 
 ## Diff
 
 - We can look at the set of *differences* between files to see what has changed
 
-```{r, echo = F, out.width='60%', fig.align='center', fig.cap='Example Diff'}
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='Example Diff'}
 knitr::include_graphics('images/example-diff.png')
 ```
 
@@ -93,12 +94,12 @@ Each commit should be:
 
 ## Pull & Push Changes
 
-```{r, echo = F, out.width='60%', fig.align='center', fig.cap='Accessing the Cloud'}
-knitr::include_graphics('images/push-pull.png')
-```
-
 - **Pulling** changes from Github allows us to access stored changes
 - **Pushing** changes stores changes on Github
+
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='Accessing the Cloud'}
+knitr::include_graphics('images/push-pull.png')
+```
 
 # Try It Out
 
@@ -114,3 +115,57 @@ knitr::include_graphics('images/push-pull.png')
 - Commit your change
 - Make another change and commit it
 - Push your changes
+
+# Working With Others
+
+## Overview 
+
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='Multiple Developers'}
+knitr::include_graphics('images/multiple-users.png')
+```
+
+## Fork & Clone
+
+- Developer A makes a repo
+- Developer B wants to make some changes
+- Developed B **forks and clones** the repo: 
+
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='Fork and Clone'}
+knitr::include_graphics('images/fork-and-clone.png')
+```
+
+## Branches
+
+- Developer B makes a new **branch** to develop a new feature
+- Allows Developer A to continue working on the main stream of development
+- Developers A and B can work in parallel
+
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='Branches'}
+knitr::include_graphics('images/branches.png')
+```
+
+## Pull Requests
+
+- Developer B initiates a **pull request (PR) ** asking Developer A to 
+  incorporate changes
+- Developer A reviews the **PR**
+- Developer A makes or requests changes
+- Developer A merges the **PR**
+
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='Pull Request Workflow'}
+knitr::include_graphics('images/pull-request.png')
+```
+
+## In Practice
+Contributor:
+
+- Fork and clone: `usethis::create_from_github("OWNER/REPO")`
+- Create branch: `usethis::pr_init(branch)`
+- Push changes to branch: `usethis::pr_push()` 
+
+Developer:
+
+- Download a PR: `usethis::pr_fetch()`
+- Push changes to branch: `usethis::pr_push()` 
+- Merge the PR on Github
+- Delete the branch: `usethis::pr_finish()`
