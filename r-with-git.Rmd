@@ -99,3 +99,18 @@ knitr::include_graphics('images/push-pull.png')
 
 - **Pulling** changes from Github allows us to access stored changes
 - **Pushing** changes stores changes on Github
+
+# Try It Out
+
+## Make a RStudio Project and Connect to Github
+
+- Create a project: `usethis::create_project(path)`
+- Use git: `usethis::use_git()`
+- Connect a Github repo: `usethis::use_github()`
+
+## Commit & Push
+
+- Make a .Rmd file and edit it
+- Commit your change
+- Make another change and commit it
+- Push your changes
