@@ -1,0 +1,57 @@
+---
+title: "R With Git and Github"
+author: "Aris Paschalidis"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  beamer_presentation:
+    theme: "CambridgeUS"
+    colortheme: "beaver"
+    slide_level: 2
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  ollapse = TRUE,
+  comment = "#>")
+```
+
+# Setup
+
+## Install Git
+
+Git allows us to track changes to our documents (i.e. Git is version control).
+
+-  Check if git is already installed: `which git`
+```{bash, echo = F}
+which git 
+```
+
+- Install git for Windows: <https://gitforwindows.org/>
+- Install git for Mac: `brew install git`
+- Install git for Linux:
+  + Ubuntu or Debian: `sudo apt-get install git`
+  + Fedora or RedHat: `sudo yum install git`
+  
+## Configure Git
+
+- Introduce yourself to git
+```{r, eval = F}
+usethis::use_git_config(user.name = "first last",
+                        user.email = "github email")
+```
+
+- Ensure set-up was successful
+```{bash}
+git config --global --list 
+```
+
+## Managing Git(Hub) Credentials[^ref]
+
+- Adopt HTTPS
+- [Secure your account with 2FA](https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa)
+- Create a PAT: `usethis::create_github_token()`
+- Store PAT into the Git credential store: `gitcreds::gitcreds_set()`
+
+[^ref]: Following the [usethis guide](https://usethis.r-lib.org/articles/articles/git-credentials.html)
+
