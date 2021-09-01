@@ -101,7 +101,7 @@ Each commit should be:
 knitr::include_graphics('images/push-pull.png')
 ```
 
-# Try It Out
+# Exercise: Use Git
 
 ## Make a RStudio Project and Connect to Github
 
@@ -160,8 +160,8 @@ knitr::include_graphics('images/pull-request.png')
 Contributor:
 
 - Fork and clone: `usethis::create_from_github("OWNER/REPO")`
-- Create branch: `usethis::pr_init(branch)`
-- Push changes to branch: `usethis::pr_push()` 
+- Create a branch: `usethis::pr_init(branch)`
+- Push changes: `usethis::pr_push()` 
 
 Developer:
 
@@ -169,3 +169,28 @@ Developer:
 - Push changes to branch: `usethis::pr_push()` 
 - Merge the PR on Github
 - Delete the branch: `usethis::pr_finish()`
+
+# Exercise: Create a Pull Request
+
+- Fork and clone this repo: `usethis::create_from_github("arisp99/r-with-git")`
+- Create a branch: `usethis::pr_init("USERNAME-fun-fact")`
+- Add a geography fun fact and picture to the presentation!
+- Push your changes: `usethis::pr_push()`
+
+# Geography Fun Facts!
+
+## Greece
+
+- The world's oldest weather station is at the base of the Acropolis
+
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='The Acropolis'}
+knitr::include_graphics('images/greece.png')
+```
+
+## Country
+
+- Add your fun fact and image here!
+```{r, eval = F, echo = F, out.width='60%', fig.align='center', fig.cap='The Acropolis'}
+# Make sure to change eval = F to eval = T for your image to load!
+knitr::include_graphics('images/country.png')
+```
