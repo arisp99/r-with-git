@@ -190,7 +190,7 @@ knitr::include_graphics('images/greece.png')
 ## Liberia
 
 - Liberia does not use the metric system
-```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='The Acropolis'}
+```{r, eval = T, echo = F, out.width='60%', fig.align='center', fig.cap='West Point, Monrovia'}
 # Make sure to change eval = F to eval = T for your image to load!
 knitr::include_graphics('images/liberia.jpg')
 ```
