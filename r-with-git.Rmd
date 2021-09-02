@@ -187,6 +187,14 @@ Developer:
 knitr::include_graphics('images/greece.png')
 ```
 
+## Mali
+
+- The country of the richest man in history (Mansa Musa)!
+
+```{r, eval =T, echo = F, out.width='50%', fig.align='center', fig.cap='Mansa Musa'}
+knitr::include_graphics('images/Mansa_Musa.jpg')
+```
+
 ## Kenya
 
 - Kenya is named after Mt Kenya, the tallest mountain in the country
