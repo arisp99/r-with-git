@@ -192,7 +192,7 @@ knitr::include_graphics('images/greece.png')
 - Haiti was the first country in the western Hemisphere to abolish slavery and
 the only to have a successful revolt!
 
-```{r, eval = T, echo = F, out.width='40%', fig.show='hold', fig.align='center', fig.cap='Whole Hearted Orphanage and me at a refugee camp at the boarder of Haiti and the DR'}
+```{r, eval = T, echo = F, out.width='45%', fig.show='hold', fig.align='center', fig.cap='Whole Hearted Orphanage and me at a refugee camp at the boarder of Haiti and the DR'}
 knitr::include_graphics('images/haiti_1.jpg')
 knitr::include_graphics('images/haiti_2.jpg')
 ```
