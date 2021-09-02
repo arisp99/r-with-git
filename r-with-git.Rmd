@@ -187,6 +187,14 @@ Developer:
 knitr::include_graphics('images/greece.png')
 ```
 
+## Kenya
+
+- Kenya is named after Mt Kenya, the tallest mountain in the country
+
+```{r, eval = T, echo = F, out.width='80%', fig.align='center', fig.cap='Sunset in the Mara'}
+knitr::include_graphics('images/sunset.jpg')
+```
+
 ## Haiti (I know I talk about this all the time!)
 
 - Haiti was the first country in the western Hemisphere to abolish slavery and
