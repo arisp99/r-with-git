@@ -187,9 +187,11 @@ Developer:
 knitr::include_graphics('images/greece.png')
 ```
 
-## Country
+## Mali
 
-- Add your fun fact and image here!
+- The country of the righest man in history (Mansa Musa)!
+
+# 
 ```{r, eval = F, echo = F, out.width='60%', fig.align='center', fig.cap='The Acropolis'}
 # Make sure to change eval = F to eval = T for your image to load!
 knitr::include_graphics('images/country.png')
