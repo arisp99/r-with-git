@@ -189,8 +189,26 @@ knitr::include_graphics('images/greece.png')
 
 ## Kenya
 
-- Add your fun fact and image here!
-```{r, eval = F, echo = F, out.width='60%', fig.align='center', fig.cap='Sunset in the Mara'}
-# Make sure to change eval = F to eval = T for your image to load!
+- Kenya is named after Mt Kenya, the tallest mountain in the country
+
+```{r, eval = T, echo = F, out.width='80%', fig.align='center', fig.cap='Sunset in the Mara'}
 knitr::include_graphics('images/sunset.jpg')
+```
+
+## Haiti (I know I talk about this all the time!)
+
+- Haiti was the first country in the western Hemisphere to abolish slavery and
+the only to have a successful revolt!
+
+```{r, eval = T, echo = F, out.width='45%', fig.show='hold', fig.align='center', fig.cap='Whole Hearted Orphanage and me at a refugee camp at the boarder of Haiti and the DR'}
+knitr::include_graphics('images/haiti_1.jpg')
+knitr::include_graphics('images/haiti_2.jpg')
+```
+
+## Liberia
+
+- Liberia does not use the metric system
+
+```{r, eval = T, echo = F, out.width='80%', fig.align='center', fig.cap='West Point, Monrovia'}
+knitr::include_graphics('images/liberia.jpg')
 ```
